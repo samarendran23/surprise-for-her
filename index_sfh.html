@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:white;
+}
+.card{
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    max-width:600px;
+}
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    background:white;
+    color:#ff4b7d;
+    cursor:pointer;
+}
+#message{
+    display:none;
+    margin-top:25px;
+    font-size:20px;
+    line-height:1.7;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>❤️ I Have a Surprise for You ❤️</h1>
+    <p>Click the button below.</p>
+
+    <button onclick="showMessage()">Open My Heart 💌</button>
+
+    <div id="message">
+        <p>
+        No matter how busy life gets or how many miles separate us,
+        you are always in my thoughts.
+        </p>
+
+        <p>
+        Thank you for every smile, every laugh, and every moment we've shared.
+        </p>
+
+        <h2>❤️ You Mean the World to Me ❤️</h2>
+
+        <p>
+        I hope this little surprise makes you smile today.
+        </p>
+
+        <p><strong>Love Always ❤️</strong></p>
+    </div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
