@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Little Surprise ❤️</title>
-
 <style>
-
 body{
     margin:0;
     font-family:Arial,sans-serif;
@@ -15,7 +13,6 @@ body{
     text-align:center;
     overflow-x:hidden;
 }
-
 .card{
     max-width:700px;
     margin:40px auto;
@@ -25,18 +22,15 @@ body{
     border-radius:25px;
     box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
-
 img{
     width:260px;
     border-radius:20px;
     box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
-
 h1{
     margin-top:25px;
     font-size:42px;
 }
-
 button{
     padding:15px 35px;
     margin-top:25px;
@@ -48,22 +42,18 @@ button{
     cursor:pointer;
     transition:.3s;
 }
-
 button:hover{
     transform:scale(1.05);
 }
-
 #message{
     display:none;
     margin-top:35px;
     font-size:21px;
     line-height:1.8;
 }
-
 audio{
     margin-top:20px;
 }
-
 .heart{
     position:fixed;
     bottom:-20px;
@@ -71,82 +61,55 @@ audio{
     font-size:25px;
     animation:float 8s linear infinite;
 }
-
 @keyframes float{
 0%{transform:translateY(0);}
 100%{transform:translateY(-120vh);}
 }
-
 </style>
 </head>
-
 <body>
-
-<audio autoplay loop controls>
+<audio id="bgMusic" loop controls>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
-
 <div class="card">
-
 <img src="swarna.png" alt="Beautiful">
-
 <h1>❤️ I Have a Surprise for You ❤️</h1>
-
 <p>Click the button below.</p>
-
 <button onclick="showMessage()">
 Open My Heart 💌
 </button>
-
 <div id="message">
-
 <p>
 No matter how busy life gets or how many miles separate us,
 you are always in my thoughts.
 </p>
-
 <p>
 Thank you for every smile, every laugh, and every moment we've shared.
 </p>
-
 <h2>❤️ You Mean the World to Me ❤️</h2>
-
 <p>
 I hope this little surprise makes you smile today.
 </p>
-
 <p><strong>Love Always ❤️</strong></p>
-
 </div>
-
 </div>
-
 <script>
-
 function showMessage(){
     document.getElementById("message").style.display="block";
+
+    const audio = document.getElementById("bgMusic");
+    audio.play().catch(err => console.log("Playback blocked:", err));
 }
-
 function createHeart(){
-
     let heart=document.createElement("div");
-
     heart.className="heart";
-
     heart.innerHTML="❤️";
-
     heart.style.left=Math.random()*100+"vw";
-
     heart.style.animationDuration=(5+Math.random()*5)+"s";
-
     document.body.appendChild(heart);
-
     setTimeout(()=>heart.remove(),10000);
 }
-
 setInterval(createHeart,300);
-
 </script>
-
 </body>
 </html>
